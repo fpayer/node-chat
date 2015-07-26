@@ -1,5 +1,5 @@
 (function(window) {
-  localStorage.code = localStorage.code || '(function(time, name, text) {\n\tapi.setBotName(\'My First Bot\');\n\tapi.setKey(\'\');\n\t$.get(\'\').done(function(resp) {\n\t\t\n\t});\n});';
+  localStorage.code = localStorage.code || '(function(time, name, text) {\n\tapi.setBotName(\'My First Bot\');\n\tapi.setKey(\'\');\n\t/*\n\t$.get(\'\').done(function(resp) {\n\t\t\n\t});\n\t*/\n});';
   var botEditor;
 
   var Editor = React.createClass({displayName: "Editor",

@@ -58,7 +58,11 @@ io.on('connection', function(client) {
       }
       //If name change, notify
       if (client.name) {
-        io.to(client.room).emit('message', client.name + ' is now known as ' + name);
+        io.to(client.room).emit('message', {
+          time : (new Date()).toLocaleString(),
+          name : 'Server',
+          text : client.name + ' is now known as ' + name
+        });
       }
       client.name = name;
     }

@@ -51,11 +51,13 @@
           localStorage.name = text;
           this.loadSettings();
           $('.modal').modal('hide');
+          stream.emit('setName', text);
         }
       } else {
         localStorage.name = text;
         this.loadSettings();
         $('.modal').modal('hide');
+        stream.emit('setName', text);
       }
     },
     componentDidMount : function() {

@@ -8,6 +8,10 @@
           users : users
         });
       });
+
+      this.props.stream.on('setName', function(e, name) {
+        $(React.findDOMNode(_this.refs.name)).val(name);
+      });
     },
     getInitialState : function() {
       return {
