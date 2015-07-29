@@ -43,13 +43,13 @@ __Examples__
 
 ```js
 api.sendMessage({
-  text : 'this is a test' ,
+  text : 'This is a test'
 });
 ```
 
 ```js
 api.sendMessage({
-  text : 'Look at this lamb' ,
-	image : 'http://lambsblog.com/wp-content/uploads/2013/10/Chilled-Lamb.jpg'
+  text : 'Look at this lamb!',
+  image : 'http://lambsblog.com/wp-content/uploads/2013/10/Chilled-Lamb.jpg'
 });
 ```
