@@ -83,11 +83,13 @@
                     }
                   });
                 },
-                sendMessage : function(message) {
+                sendMessage : function(opts) {
                   _this.addMessage({
                     time : (new Date()).toLocaleTimeString(),
                     name : name ? name : (localStorage.name + '\'s Bot'),
-                    text : message
+                    text : opts.text,
+                    image : opts.image,
+                    bot : true
                   });
                 }
               }
@@ -127,7 +129,10 @@
               React.createElement("tbody", null, 
                  this.state.messages.map(function(item, index) {
                   return React.createElement("tr", {key: index}, 
-                    React.createElement("td", {style: item.error ? {color:'red'} : {}}, '[' + item.time + '] ' + item.name + ' - ' + item.text)
+                    React.createElement("td", null, 
+                      React.createElement("span", null, '[' + item.time + '] ' + item.name + ' - ' + item.text), 
+                      React.createElement("img", {src: item.image, className: "ui small image", style: {display:item.image ? '' : 'none'}})
+                    )
                   )
                 }) 
               )

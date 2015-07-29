@@ -61,7 +61,10 @@
             <tbody id='messages'>
               { this.state.messages.map(function(item, index) {
                 return <tr key={index}>
-                  <td>{'[' + item.time + '] ' + item.name + ' - ' + item.text}</td>
+                  <td>
+                    <span>{'[' + item.time + '] ' + item.name + ' - ' + item.text}</span>
+                    <img src={item.image} className='ui small image' style={{display:item.image ? '' : 'none'}} />
+                  </td>
                 </tr>
               }) }
             </tbody>

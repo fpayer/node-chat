@@ -16,11 +16,12 @@
           }
         });
       },
-      sendMessage : function(message) {
+      sendMessage : function(opts) {
         socket.emit('message', {
           time : (new Date()).toLocaleTimeString(),
           name : name ? name : (localStorage.name + '\'s Bot'),
-          text : message,
+          text : opts.text,
+          image : opts.image,
           bot : true
         });
       }

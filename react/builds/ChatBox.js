@@ -61,7 +61,10 @@
             React.createElement("tbody", {id: "messages"}, 
                this.state.messages.map(function(item, index) {
                 return React.createElement("tr", {key: index}, 
-                  React.createElement("td", null, '[' + item.time + '] ' + item.name + ' - ' + item.text)
+                  React.createElement("td", null, 
+                    React.createElement("span", null, '[' + item.time + '] ' + item.name + ' - ' + item.text), 
+                    React.createElement("img", {src: item.image, className: "ui small image", style: {display:item.image ? '' : 'none'}})
+                  )
                 )
               }) 
             )
